@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>DHGate EOS 运营平台 - 纠纷详情</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/layui/layui.js"></script>
+    <link id="layuicss-layer" rel="stylesheet" href="https://portrayal.eos.dhgate.com/assets/vendor/layui/css/modules/layer/default/layer.css?v=3.1.1" media="all">
+    <link id="layuicss-laydate" rel="stylesheet" href="https://portrayal.eos.dhgate.com/assets/vendor/layui/css/modules/laydate/default/laydate.css?v=5.0.9" media="all">
+</head>
+<body>
+
+<!-- Hidden inputs -->
+<input type="hidden" id="rfxid" value="8aaa878b9face2eb019fc85da2cd69c3">
+<input type="hidden" id="rfxno" value="321250548418">
+<input type="hidden" id="isviprefund" value="">
+
+<div class="page-wrapper">
+
+    <!-- ==================== Page Header ==================== -->
+    <div class="page-header">
+        <div>
+            <h2>纠纷详情 <span style="font-weight:400;color:rgba(255,255,255,0.7);font-size:13px;margin-left:8px;">Order Dispute Detail</span></h2>
+        </div>
+        <div class="order-no">订单号：321250548418</div>
+    </div>
+
+    <!-- ==================== Order General Information ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Order General Information <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 订单基本信息</span></h2>
+        </div>
+        <div class="section-body">
+            <table class="info-table">
+                <tr>
+                    <th>Order Number</th>
+                    <td>321250548418 &nbsp; <span class="badge badge-orange">test</span></td>
+                    <th>Payment Method</th>
+                    <td>DHPAY</td>
+                </tr>
+                <tr>
+                    <th>Buyer</th>
+                    <td>
+                        <a href="//portrayal.eos.dhgate.com/infomation/buyer/index?search_key=af10e071c2c54855a0f3d96fc624109f&search_types=buyerid" target="_blank">Jason_Acy</a>
+                        <span class="badge badge-blue">V1</span>
+                        <span class="badge badge-purple">60天新客纠纷订单</span>
+                        <span class="badge badge-yellow">cash-0 coupon-0</span>
+                    </td>
+                    <th>Seller</th>
+                    <td>
+                        <a href="//portrayal.eos.dhgate.com/infomation/seller/index?search_key=wellhouse00oo&sellerid=8aaa8c7c8e093a56018e0e2c5991745f" target="_blank">wellhouse00oo</a>
+                        <span class="badge badge-blue" id="goodSeller">优质商家</span>
+                        (可用余额: 806.65) <span class="badge badge-blue">LV5</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Buyer Tag</th>
+                    <td>
+                        <button class="btn btn-default" data-type="More_buyer">More</button>
+                        <button class="btn btn-default" data-type="Add_buyer">Add</button>
+                    </td>
+                    <th>Seller Tag</th>
+                    <td>
+                        <button class="btn btn-default" data-type="More_seller">More</button>
+                        <button class="btn btn-default" data-type="Add_seller">Add</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ==================== Order Dates Summary ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Order Dates Summary <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 订单时间汇总</span></h2>
+        </div>
+        <div class="section-body" style="padding:0;">
+            <table class="info-table" id="datesSummary">
+                <tbody id="datesSummary1">
+                    <tr><th>Order Date</th><td>2026-08-04 00:03:28</td></tr>
+                    <tr><th>Paid Date</th><td>2026-08-04 00:03:31</td></tr>
+                    <tr><th>Finance Confirm Date</th><td>2026-08-04 00:03:33</td><th>SYSTEM</th></tr>
+                    <tr><th>Supplier Confirm</th><td>2026-08-04 00:03:33</td><th>SYSTEM</th></tr>
+                    <tr><th>Supplier 发货截止日</th><td>2026-08-10 00:03:33</td><th>Supplier</th></tr>
+                    <tr><th>Supplier 发货日</th><td>2026-08-05 15:32:27</td><th>Supplier</th></tr>
+                    <tr class="row-highlight"><th>卖家承诺运达时间</th><td>2026-09-02 15:32:27</td></tr>
+                    <tr><th>Buyer发起纠纷截止日</th><td>2026-09-19 15:32:28</td></tr>
+                    <tr><th>订单改为Payment Release的时间</th><td>2026-08-29 11:22:48</td><th>system</th></tr>
+                    <tr><th>Buyer Confirm Delivery Date</th><td>2026-08-29 11:22:47</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ==================== Order Shipping Information ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Order Shipping Information <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 物流信息</span></h2>
+        </div>
+        <div class="section-body">
+            <table class="info-table" id="Shipping">
+                <tbody id="Shipping1">
+                    <tr><th>Carrier requested from buyer</th><td colspan="3">Seller-Defined STD Logitstics</td></tr>
+                    <tr><th>Shipping Deadline</th><td>2026-08-10 00:03:33</td><th>买家选择发货方式</th><td>线下</td></tr>
+                </tbody>
+            </table>
+
+            <table class="info-table shipping-table" id="Shipping-2">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Tracking No / Last Mile</th>
+                        <th>是否异常</th>
+                        <th>物流是否退赔</th>
+                        <th>赔付金额</th>
+                        <th>Note</th>
+                        <th>投诉状态</th>
+                        <th>Carrier</th>
+                        <th>Status From Carrier</th>
+                        <th>发货方式</th>
+                    </tr>
+                </thead>
+                <tbody id="Shipping2">
+                    <tr>
+                        <td>2026-08-05 15:32</td>
+                        <td>ZS16243569999</td>
+                        <td>否/否</td>
+                        <td>否</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>EMS</td>
+                        <td><a href="javascript:void(0);" style="color:#1890ff;" onclick="viewdetail('EMS','ZS16243569999')">查看详情</a><br><small style="color:#888;">已妥投【GB NOTTINGHAM 】</small></td>
+                        <td>线下</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="info-table shipping-table" id="Shipping-3">
+                <thead><tr><th style="width:120px;"></th><th>Billing Address</th><th>Shipping Address</th></tr></thead>
+                <tbody id="Shipping3">
+                    <tr><th>Contact Name</th><td></td><td>- Jason lin</td></tr>
+                    <tr><th>Address Line 1</th><td></td><td>22 Quay Place</td></tr>
+                    <tr><th>State</th><td></td><td>NOTTINGHAM</td></tr>
+                    <tr><th>Country</th><td></td><td>United Kingdom</td></tr>
+                    <tr><th>City</th><td></td><td>NOTTINGHAM</td></tr>
+                    <tr><th>Postal Code</th><td></td><td>NG23EW</td></tr>
+                    <tr><th></th><td><a href="//portrayal.eos.dhgate.com/help/contact/index?paymenttype=2&title=321250548418" target="_blank">联系信息</a></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top:12px;">
+                <button id="showall" onclick="showall()" class="btn btn-primary">显示全部</button>
+                <button id="hideall" onclick="hideall()" class="btn btn-default" style="display:none;">隐藏全部</button>
+            </div>
+            <table class="info-table" id="Shipping-4"></table>
+        </div>
+    </div>
+
+    <!-- ==================== Order Item Detail ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Order Item Detail <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 商品明细</span></h2>
+        </div>
+        <div class="section-body">
+            <table class="info-table" id="inspection">
+                <tbody>
+                    <tr><th>商品巡检原因</th><td>商品无问题</td><th>巡检打标时间</th><td>2026-08-27 10:36:04</td><th>操作人</th><td>dulei</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-divider"><span>DHgold</span></div>
+
+            <table class="info-table" id="itemDetali">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>是否AIGC</th>
+                        <th>一级类目</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                        <th>Comments</th>
+                        <th>Buyer Remark</th>
+                    </tr>
+                </thead>
+                <tbody id="item">
+                    <tr>
+                        <td>
+                            <a href="//orderfund.eos.dhgate.com/orderfundmgr/search/detail/productDetail.do?rfxid=8aaa878b9face2eb019fc85da2cd69c3&pid=8aaabfa894639a7701949649558d2ec9" target="_blank">
+                                with box designer shoes for men women brown pink black white grey mens outdoor sports trainers(1043012957)
+                            </a><br>
+                            <small style="color:#888;">Shipping from: China</small><br>
+                            <small style="color:#888;">Options: with tag+lace(no box)</small><br>
+                            <small style="color:#888;">颜色: Gold | 尺码: MenUS10=EUR44=UK9.5</small>
+                        </td>
+                        <td></td>
+                        <td>Shoes & Accessories</td>
+                        <td>24 / Piece</td>
+                        <td>2</td>
+                        <td>48</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="background:#fff2f0;">
+                        <td><strong>total Quantity</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong style="color:#cf1322;">2</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="section-divider"><span>费用明细</span></div>
+
+            <table class="info-table" id="itemDetali2">
+                <thead><tr><th style="width:180px;"></th><th>Seller</th><th>Buyer</th></tr></thead>
+                <tbody id="item2">
+                    <tr><th>Item Cost</th><td>48</td><td>48</td></tr>
+                    <tr><th>GST/VAT</th><td>--</td><td>0</td></tr>
+                    <tr><th>Seller Adjust</th><td>0</td><td>0</td></tr>
+                    <tr><th>Shipping Cost</th><td>23.32</td><td>23.32</td></tr>
+                    <tr><th>Seller Shipping Cost Discount</th><td>-0</td><td>-0</td></tr>
+                    <tr><th>Total Refund</th><td>0</td><td>0</td></tr>
+                    <tr><th>Extra Money</th><td>0</td><td>0</td></tr>
+                    <tr class="row-highlight"><th>DH Coupon</th><td></td><td>(1) 1.31</td></tr>
+                    <tr><th>Seller Coupon</th><td>-0</td><td>-0</td></tr>
+                    <tr><th>交易佣金</th><td>17.83</td><td>--</td></tr>
+                    <tr><th>支付手续费（放款后结算）</th><td>2.45</td><td>-</td></tr>
+                    <tr style="background:#f6ffed;"><th>Total</th><td><strong>51.04</strong></td><td><strong>70.32</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ==================== Case Operator Log ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Case Operator Log <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 操作日志</span></h2>
+        </div>
+        <div class="section-body">
+            <!-- 协议纠纷 / 平台纠纷 -->
+            <div class="sub-tabs">
+                <div class="sub-tab active" data-tab="agreement-dispute">协议纠纷</div>
+                <div class="sub-tab" data-tab="platform-dispute">平台纠纷</div>
+            </div>
+
+            <!-- 协议纠纷内容 -->
+            <div id="agreement-dispute" class="tab-content active">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">2026-08-26 13:31:39</div>
+                        <div class="actor">Jason_Acy</div>
+                        <div class="content">拒绝您的协议并提交了一个新方案
+退款原因：货物与描述不符——尺码不符
+退款方案：全额退款退货
+退款金额：US 71.32()with box designer shoes for men women brown pink black white grey mens outdoor sports trainers(退货数量：2Piece)
+详细说明：Items are too large and I would like a full refund.
+运费承担方：买家</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-25 14:08:45</div>
+                        <div class="actor">wellhouse00oo</div>
+                        <div class="content">拒绝了买家申请，提交了新协议
+退款原因：货物与描述不符——尺码不符
+退款方案：部分退款退货
+退款金额：US 5.00
+详细说明：the buyer said it is 29cm , it cann't too small
+运费承担方：买家</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-25 13:57:16</div>
+                        <div class="actor">Quisel</div>
+                        <div class="content">买家开启了售后纠纷
+退款原因：货物与描述不符——尺码不符
+退款方案：全额退款
+退款金额：US 71.01
+退款商品：with box designer shoes for men women brown pink black white grey mens outdoor sports trainers(退货数量：2Piece)
+详细说明：Items are too large and I would like a full refund.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 平台纠纷内容 -->
+            <div id="platform-dispute" class="tab-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">2026-08-29 11:22:46</div>
+                        <div class="actor">system</div>
+                        <div class="content">纠纷已关闭</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-29 10:54:16</div>
+                        <div class="actor">wangjingyi@dhgate.com</div>
+                        <div class="content">纠纷人员执行复核
+裁决方案：放款
+买家证据不充分补充说明：买家未看信未提供证据
+责任方：买家</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-29 10:54:05</div>
+                        <div class="actor">wangjingyi@dhgate.com</div>
+                        <div class="content">纠纷人员执行裁决
+裁决方案：放款
+退款原因：买家证据不充分
+退款金额：71.32()
+责任方：买家</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-27 16:45:15</div>
+                        <div class="actor">wangjingyi@dhgate.com</div>
+                        <div class="content">系统进入审核</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-26 14:02:29</div>
+                        <div class="actor">wellhouse00oo</div>
+                        <div class="content">Seller 提交了证据</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-26 13:32:07</div>
+                        <div class="actor">Jason_Acy</div>
+                        <div class="content">Buyer提交了证据</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2026-08-26 13:32:06</div>
+                        <div class="actor">Jason_Acy</div>
+                        <div class="content">将纠纷升级至平台
+升级方式：buyer升级
+纠纷解决方案：全部退货全额退款,buyer承担运费
+一级退款原因：货物与描述不符
+二级退款原因：尺码不符
+退款金额：71.32()
+备注：Items are too large and I would like a full refund.
+联系方式：Email
+联系信息：jingjinglin0713@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Evidence ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Evidence <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 证据</span></h2>
+        </div>
+        <div class="section-body" style="padding:0;">
+            <table class="info-table evidence-table">
+                <thead>
+                    <tr>
+                        <th style="width:120px;">阶段</th>
+                        <th>From buyer</th>
+                        <th>From seller</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>协议纠纷</strong></td>
+                        <td>
+                            <div class="evidence-grid" id="test1">
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaa84f7a037eaa401a03c8d7bbb7e3a','1')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/26/2334f171-743a-44c9-b8f9-8738a9185711.jpeg">
+                                    <div class="card-text"><p>2026-08-26 13:31:40</p></div>
+                                </div>
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaadd069ff5bb9201a0377e9331458e','1')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/25/34cda91a-f79c-4e0d-810c-2b5145256e9a.png">
+                                    <div class="card-text"><p>2026-08-25 13:57:17</p></div>
+                                </div>
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaadd069ff5bb9201a0377e9330458d','1')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/25/eed85626-6e95-4f70-aad6-af9d511c187a.jpeg">
+                                    <div class="card-text"><p>2026-08-25 13:57:17</p></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="evidence-grid">
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaa91389ff5b95001a0378915710bed',1)">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/25/845a768f-7951-4038-876c-07ed581111a8.jpg">
+                                    <div class="card-text"><p>2026-08-25 14:08:45</p></div>
+                                </div>
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaa91389ff5b95001a0378915710bec',1)">
+                                    <img src="//image.dhgate.com//f3/csmg/bw/j/25/e0b9ae40-26f0-4b8c-8b5e-26fa35eb096c.jpg">
+                                    <div class="card-text"><p>2026-08-25 14:08:45</p></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trader Evidence(协议)</strong></td>
+                        <td><div class="empty-state">无证据</div></td>
+                        <td><div class="empty-state">无证据</div></td>
+                    </tr>
+                    <tr>
+                        <td><strong>平台阶段</strong></td>
+                        <td>
+                            <div class="evidence-grid">
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaa84f7a037eaa401a03c8de6147e52','2')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/26/2334f171-743a-44c9-b8f9-8738a9185711.jpeg">
+                                    <div class="card-text"><p>2026-08-26 13:32:07</p></div>
+                                </div>
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaa84f7a037eaa401a03c8de6147e51','2')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/25/eed85626-6e95-4f70-aad6-af9d511c187a.jpeg">
+                                    <div class="card-text"><p>2026-08-26 13:32:07</p></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="evidence-grid">
+                                <div class="evidence-card" onclick="openEvidenceDetail('8aaa16b5a037ecd501a03ca9b4100734','2')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/26/433717ab-7c18-4360-957f-f9adbe2d4a66.jpg">
+                                    <div class="card-text"><p>2026-08-26 14:02:29</p></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trader Evidence(平台)</strong></td>
+                        <td>
+                            <div class="evidence-grid">
+                                <div class="evidence-card" onclick="openEvidenceDetail('5a047327e34c5fbbe0630100007fdc10','2')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/27/e1f58ffe-2e9c-4af6-9461-f7db33392968.png">
+                                    <div class="card-text"><p>2026-08-27 16:52:03<br>wangjingyi</p></div>
+                                </div>
+                                <div class="evidence-card" onclick="openEvidenceDetail('5a047327e34b5fbbe0630100007fdc10','2')">
+                                    <img src="//image.dhgate.com/f3/csmg/bw/j/27/b28fc959-dee5-41f3-b424-e417ca6f6ede.png">
+                                    <div class="card-text"><p>2026-08-27 16:52:03<br>wangjingyi</p></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><div class="empty-state">无证据</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align:left;padding-top:12px;">
+                            <button type="button" class="btn btn-danger" data-type="UploadEvidence-buyer">上传证据</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ==================== Message List ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Message List <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 留言记录</span></h2>
+        </div>
+        <div class="section-body">
+            <div class="sub-tabs">
+                <div class="sub-tab active" data-message-tab="msg-agreement">协议阶段</div>
+                <div class="sub-tab" data-message-tab="msg-platform">平台阶段</div>
+            </div>
+            <div id="msg-agreement" class="message-tab-content active">
+                <div class="empty-state">暂无留言记录</div>
+            </div>
+            <div id="msg-platform" class="message-tab-content">
+                <div class="empty-state">暂无留言记录</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Communication Links ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Communication <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 沟通渠道</span></h2>
+        </div>
+        <div class="section-body">
+            <div class="comm-links">
+                <a href="//portrayal.eos.dhgate.com/communication/list/list?oid=8aaa878b9face2eb019fc85da2cd69c3&SENDNICK=3556f1331dc34b2ba90fb2460c799434&RECIEVERNICK=8aaa8c7c8e093a56018e0e2c59987460" target="_blank">站内信记录</a>
+                <a href="//crm.eos.dhgate.com/leavemsg/msg/index?orderno=321250548418" target="_blank">留言记录</a>
+                <a href="//crm.eos.dhgate.com//leavemsg/sendmsg/index" target="_blank">外发留言</a>
+                <a href="//portrayal.eos.dhgate.com/imrecord/index/index?buyerid=3556f1331dc34b2ba90fb2460c799434&sellerid=8aaa8c7c8e093a56018e0e2c59987460" target="_blank">IM 沟通</a>
+                <a href="https://base.eos.dhgate.com/portal/system/1969/operation#https://apis.eos.dhgate.com/crmeos/index.html#/receivemessage?headuser=shiyongxin&buyername=Jason_Acy" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Arbitramen List ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Arbitramen List <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 裁决方案记录</span></h2>
+        </div>
+        <div class="section-body">
+            <div class="empty-state">暂无数据</div>
+        </div>
+    </div>
+
+    <!-- ==================== Twice Arbitramen ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Twice Arbitramen <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 二次裁决记录</span></h2>
+        </div>
+        <div class="section-body">
+            <div class="empty-state">暂无数据</div>
+        </div>
+    </div>
+
+    <!-- ==================== Service Log ==================== -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>Service Log <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 服务日志</span></h2>
+        </div>
+        <div class="section-body">
+            <div style="margin-bottom:14px;padding:10px 14px;background:#f9f9f9;border-radius:6px;font-size:13px;">
+                站内信是否有新沟通：<strong>否</strong>
+            </div>
+            <table class="info-table" id="freightfee_table_list">
+                <thead>
+                    <tr>
+                        <th>日期</th><th>log编号</th><th>操作人</th><th>log内容</th>
+                        <th>买家留言标题</th><th>卖家留言标题</th><th>提醒日期</th><th>状态</th><th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-08-29 10:53:43</td>
+                        <td>264</td>
+                        <td>wangjingyi</td>
+                        <td>买家投诉尺码问题（2双鞋），证据不足，放款，通知双方</td>
+                        <td><a href="//crm.eos.dhgate.com/leavemsg/msg/index?orderno=321250548418" target="_blank">About Your Dispute Order 321250548418 from DHgate</a><br><small>未读 | 未回复</small></td>
+                        <td><a href="//crm.eos.dhgate.com/leavemsg/msg/index?orderno=321250548418" target="_blank">请关注升级纠纷订单321250548418</a><br><small>已读 | 未回复</small></td>
+                        <td>2026-08-31</td>
+                        <td><span class="status-badge status-valid">正常</span></td>
+                        <td>
+                            <button class="btn btn-primary" style="padding:2px 8px;font-size:11px;" onclick="changeup(11995669,'8aaa878b9face2eb019fc85da2cd69c3')">置顶</button>
+                            <a class="btn btn-default" style="padding:2px 8px;font-size:11px;" href="//portrayal.eos.dhgate.com/dispute/Disputeinfo/serviceLog?logid=11995669&rfxno=321250548418&rfxid=8aaa878b9face2eb019fc85da2cd69c3&action=show" target="_blank">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2026-08-27 16:56:27</td>
+                        <td>24</td>
+                        <td>wangjingyi</td>
+                        <td>买家投诉尺码问题（2双鞋），证据不足，催证买家提供商品图和测量证据，卖家等待</td>
+                        <td><a href="//crm.eos.dhgate.com/leavemsg/msg/index?orderno=321250548418" target="_blank">About Your Dispute Order 321250548418 from DHgate</a><br><small>未读 | 未回复</small></td>
+                        <td><a href="//crm.eos.dhgate.com/leavemsg/msg/index?orderno=321250548418" target="_blank">请关注升级纠纷订单321250548418</a><br><small>已读 | 已回复</small></td>
+                        <td>2026-08-29</td>
+                        <td><span class="status-badge status-valid">正常</span></td>
+                        <td>
+                            <button class="btn btn-primary" style="padding:2px 8px;font-size:11px;" onclick="changeup(11991968,'8aaa878b9face2eb019fc85da2cd69c3')">置顶</button>
+                            <a class="btn btn-default" style="padding:2px 8px;font-size:11px;" href="//portrayal.eos.dhgate.com/dispute/Disputeinfo/serviceLog?logid=11991968&rfxno=321250548418&rfxid=8aaa878b9face2eb019fc85da2cd69c3&action=show" target="_blank">查看</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div><!-- end page-wrapper -->
+
+<!-- ==================== Footer Bar ==================== -->
+<div class="footer-bar">
+    <button type="button" class="btn btn-primary" data-type="addTemp">添加提醒</button>
+    <button type="button" class="btn btn-disabled">运费申请</button>
+    <button type="button" class="btn btn-disabled">提前进入裁决</button>
+    <button type="button" class="btn btn-disabled">纠纷真实原因&退款比例</button>
+    <button type="button" class="btn btn-disabled">填写裁决方案</button>
+    <button type="button" class="btn btn-disabled">补充证据</button>
+    <button type="button" class="btn btn-disabled">延长卖家收货截止日</button>
+</div>
+
+<!-- Upload Evidence Modal -->
+<div id="UploadEvidence_buyer" style="display:none;padding:20px;">
+    <div style="max-width:600px;">
+        <form class="layui-form" form="post" id="question_form">
+            <div style="margin-bottom:16px;">
+                <select id="attach_type" name="attach_type">
+                    <option value="2">Evidence from Seller</option>
+                    <option value="1" selected="">Evidence from Buyer</option>
+                </select>
+            </div>
+            <div id="filePicker" style="color:blue;cursor:pointer;display:inline-block;padding:8px 16px;background:#1890ff;color:#fff;border-radius:6px;" onclick="remove_pre();">
+                <i>📎</i> 上传附件
+            </div>
+            <div id="Tip" style="color:#888;margin-top:8px;font-size:12px;">最多上传4个文件，单个文件不超过5MB，支持JPG、PNG、JPEG、doc、docx格式</div>
+            <div id="fileList" class="uploader-list" style="margin-top:10px;"></div>
+            <div id="contentUploadTip" style="color:red;margin-top:8px;"></div>
+            <div id="pre_img"></div>
+            <div style="margin-top:16px;">
+                <button class="btn btn-primary" lay-submit lay-filter="BuyerformSub">提交</button>
+            </div>
+            <input type="hidden" name="rfxid" value="8aaa878b9face2eb019fc85da2cd69c3">
+        </form>
+    </div>
+</div>
+
+<!-- Tag Modals -->
+<div id="auditTag_win" style="display:none;padding:20px;">
+    <div style="max-width:600px;">
+        <form class="layui-form" form="post" id="addBuyerTagForm" onsubmit="return false;">
+            <div style="margin-bottom:12px;">
+                <label style="font-weight:600;margin-right:8px;">为选中的标签添加备注</label>
+                <textarea name="remark" lay-verify="remark" class="layui-textarea" id="buyerTag" style="width:100%;"></textarea>
+            </div>
+            <button class="btn btn-primary" lay-submit lay-filter="TagformSub" id="TagformSub">提交</button>
+            <button class="btn btn-default" onclick="cancel()">取消</button>
+            <input type="hidden" id="tagIdForm" name="tagIdForm" value="">
+            <input type="hidden" id="utype" name="utype" value="2">
+            <input type="hidden" id="buyerid" name="buyerid" value="af10e071c2c54855a0f3d96fc624109f">
+            <input type="hidden" id="buyernickname" name="buyernickname" value="Jason_Acy">
+        </form>
+    </div>
+</div>
+
+<div id="auditTag_seller" style="display:none;padding:20px;">
+    <div style="max-width:600px;">
+        <form class="layui-form" form="post" id="addSellerTagForm" onsubmit="return false;">
+            <div style="margin-bottom:12px;">
+                <label style="font-weight:600;margin-right:8px;">为选中的标签添加备注</label>
+                <textarea name="remarkSeller" lay-verify="remarkSeller" class="layui-textarea" id="SellerTag" style="width:100%;"></textarea>
+            </div>
+            <button class="btn btn-primary" lay-submit lay-filter="TagSellerformSub" id="TagSellerformSub">提交</button>
+            <button class="btn btn-default" onclick="cancel()">取消</button>
+            <input type="hidden" id="tagIdFormSeller" name="tagIdFormSeller" value="">
+            <input type="hidden" id="utype" name="utype" value="1">
+            <input type="hidden" id="sellerid" name="sellerid" value="8aaa8c7c8e093a56018e0e2c5991745f">
+            <input type="hidden" id="sellernickname" name="sellernickname" value="wellhouse00oo">
+        </form>
+    </div>
+</div>
+
+<div id="get_tag_win" style="margin-top:5px;display:none;padding:20px;">
+    <form class="layui-form" onsubmit="return false;">
+        <div style="margin-bottom:12px;">
+            <label style="font-weight:600;margin-right:8px;">标签名称：</label>
+            <input type="text" id="tagname" name="tagname" style="width:200px;padding:6px 10px;border:1px solid #d9d9d9;border-radius:4px;" autocomplete="off">
+            <button class="btn btn-primary" style="padding:6px 14px;" id="search" data-type="reload">查询</button>
+            <button class="btn btn-default" style="padding:6px 14px;" data-type="reset" type="reset">重置</button>
+        </div>
+        <table class="layui-hide" id="taglists" lay-filter="taglists"></table>
+    </form>
+</div>
+
+<div id="get_tag_win_seller" style="margin-top:5px;display:none;padding:20px;">
+    <form class="layui-form" onsubmit="return false;">
+        <div style="margin-bottom:12px;">
+            <label style="font-weight:600;margin-right:8px;">标签名称：</label>
+            <input type="text" id="tagname_seller" name="tagname_seller" style="width:200px;padding:6px 10px;border:1px solid #d9d9d9;border-radius:4px;" autocomplete="off">
+            <button class="btn btn-primary" style="padding:6px 14px;" id="search" data-type="seller_reload">查询</button>
+            <button class="btn btn-default" style="padding:6px 14px;" data-type="seller_reset" type="seller_reset">重置</button>
+        </div>
+        <table class="layui-hide" id="taglists_seller" lay-filter="taglists_seller"></table>
+    </form>
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="/assets/dist/js/disputeinfonew.js?v=1788243897"></script>
+<script type="text/javascript" src="//js.dhresource.com/buyer/orderList/old_language/order_var_en.js?v=20180807"></script>
+<script type="text/javascript" src="//www.dhresource.com/dhs/fob/js/crm/common/jquery.rotate.min.js?version=201710271046"></script>
+<script type="text/javascript" src="//www.dhresource.com/dhs/fob/js/crm/uploader/webuploader.js?version=201710271046"></script>
+<script type="text/javascript" src="//www.dhresource.com/dhs/fob/js/crm/uploader/webuploader_core.js?version=201710271046"></script>
+<script type="text/javascript" src="/assets/dist/js/upload.js?v=1788243897"></script>
+
+<script>
+    // Upload setup
+    $(function(){
+        var fileext = "*.jpg;*.png;*.jpeg;*.doc;*.docx;";
+        var supplierid = '000000000000000000000000000001';
+        var folder = "/csmsg/uploaddify";
+        var sizetype = '5120';
+        var url = "https://bupload.dhgate.com/uploadfile?isunique=1&functionname=csmg&supplierid="+supplierid+"&fileext="+fileext+"&folder="+folder+"&sizetype="+sizetype;
+        webuploader.upload.init(url,"filePicker","//image.dhgate.com/2008/web20/buyer/img/Uploader.swf","ctlBtn","cn",true);
+        webuploader.upload.display("fileList",150,150);
+        webuploader.upload.rule(4,5,'JPG,PNG,JPEG,DOC,DOCX');
+        webuploader.upload.create($Leavemessage.uploader);
+    })
+
+    function remove_pre(){ $("#pre_img").remove(); }
+    function cancel(){ location.reload(); }
+
+    function showall(){
+        $(".endtable").show();
+        $("#showall").hide();
+        $("#hideall").show();
+    }
+    function hideall(){
+        $(".endtable").hide();
+        $("#showall").show();
+        $("#hideall").hide();
+    }
+
+    function changeup(id, rfxid){
+        $.ajax({
+            url: "/dispute/ajaxinfo/changUp",
+            type: "POST",
+            data: {"rfxid": rfxid, "id": id},
+            dataType: "json",
+            success: function(data) {
+                layer.alert(data == 1 ? 'success' : 'fail');
+            }
+        });
+    }
+
+    function logRecall(id, rfxid){
+        $.ajax({
+            url: "/dispute/ajaxinfo/logRecall",
+            type: "POST",
+            data: {"rfxid": rfxid, "id": id},
+            dataType: "json",
+            success: function(data) {
+                if (data == 1) {
+                    layer.alert('success');
+                    parent.location.reload();
+                } else {
+                    layer.alert('fail');
+                }
+            }
+        });
+    }
+
+    function openEvidenceDetail(evidenceId, type) {
+        var url = '/dispute/disputeinfonew/evidencedetail?id=' + evidenceId;
+        if (type) {
+            url += '&type=' + type;
+            url += '&rfxno=' + $("#rfxno").val();
+        }
+        layer.open({
+            type: 2,
+            title: '查看大图 & 人工二次审核',
+            area: ['90%', '90%'],
+            maxmin: true,
+            content: url,
+            scrollbar: false,
+            success: function(layero, index){
+                var iframe = layer.getChildFrame('body', index);
+                var bodyHeight = $(window).height() * 0.9;
+                iframe.css('height', bodyHeight + 'px');
+                var iframeWin = window[layero.find('iframe')[0]['name']];
+                if(iframeWin){
+                    iframeWin.document.documentElement.style.height = bodyHeight + 'px';
+                    iframeWin.document.body.style.height = bodyHeight + 'px';
+                }
+            }
+        });
+    }
+
+    function viewdetail(type, tn){
+        $.post('/tracking/list/getviewdetail', {type:type, tn:tn}, function(str){
+            layer.open({
+                type: 1,
+                title: '查看详情',
+                area: ['740px', '500px'],
+                shade: [0.4, '#CCCCCC'],
+                maxmin: true,
+                offset: 'auto',
+                content: str.data
+            });
+        });
+    }
+</script>
+
+<script>
+    // Tab switching functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // 操作日志 tab 切换
+        const logTabs = document.querySelectorAll('.sub-tab[data-tab]');
+        logTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                const card = this.closest('.section-body');
+
+                // Remove active class from all tabs in this card
+                card.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Hide all tab contents
+                card.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Show target tab content with animation
+                const targetContent = card.querySelector('#' + targetTab);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // 留言记录 tab 切换
+        const messageTabs = document.querySelectorAll('.sub-tab[data-message-tab]');
+        messageTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-message-tab');
+                const card = this.closest('.section-body');
+
+                card.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                card.querySelectorAll('.message-tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                const targetContent = card.querySelector('#' + targetTab);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
