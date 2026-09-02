@@ -317,6 +317,39 @@ a:hover { color: #40a9ff; text-decoration: underline; }
     }
 }
 
+/* ===================== layui Table Style ===================== */
+.layui-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: #fff;
+}
+
+.layui-table th,
+.layui-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.layui-table th[align="center"],
+.layui-table td[align="center"] {
+    text-align: center !important;
+}
+
+.layui-table th[align="right"],
+.layui-table td[align="right"] {
+    text-align: right !important;
+}
+
+.layui-table th {
+    background: #fafafa;
+    font-weight: 600;
+    color: #333;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
 /* ===================== Timeline / Log ===================== */
 .timeline {
     position: relative;
@@ -470,7 +503,13 @@ a:hover { color: #40a9ff; text-decoration: underline; }
 
 .evidence-table td {
     padding: 14px;
-    vertical-align: top;
+    vertical-align: middle;
+}
+
+.evidence-table td:first-child {
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
 }
 
 /* ===================== Empty State ===================== */
@@ -492,6 +531,13 @@ a:hover { color: #40a9ff; text-decoration: underline; }
 .shipping-table td, .shipping-table th {
     padding: 8px 12px;
     font-size: 12px;
+}
+
+/* Shipping section divider */
+.shipping-divider {
+    height: 1px;
+    background: #e8e8e8;
+    margin: 16px 0;
 }
 
 /* ===================== Scrollbar ===================== */
