@@ -36,37 +36,69 @@
         <div class="section-body">
             <table class="info-table">
                 <tr>
-                    <th>Order Number</th>
-                    <td>321250548418 &nbsp; <span class="badge badge-orange">test</span></td>
-                    <th>Payment Method</th>
+                    <th>Order Number :</th>
+                    <td>321250548418&nbsp;&nbsp;<span class="badge badge-orange">test</span></td>
+                    <th>commissionUOUV2</th>
                     <td>DHPAY</td>
                 </tr>
                 <tr>
-                    <th>Buyer</th>
+                    <th>Buyer:</th>
                     <td>
                         <a href="//portrayal.eos.dhgate.com/infomation/buyer/index?search_key=af10e071c2c54855a0f3d96fc624109f&search_types=buyerid" target="_blank">Jason_Acy</a>
                         <span class="badge badge-blue">V1</span>
-                        <span class="badge badge-purple">60天新客纠纷订单</span>
                         <span class="badge badge-yellow">cash-0 coupon-0</span>
                     </td>
-                    <th>Seller</th>
+                    <th>Seller:</th>
                     <td>
                         <a href="//portrayal.eos.dhgate.com/infomation/seller/index?search_key=wellhouse00oo&sellerid=8aaa8c7c8e093a56018e0e2c5991745f" target="_blank">wellhouse00oo</a>
-                        <span class="badge badge-blue" id="goodSeller">优质商家</span>
-                        (可用余额: 806.65) <span class="badge badge-blue">LV5</span>
+                        <span class="badge badge-blue">KA</span>
+                        (可用余额: 806.65)
+                        <span class="badge badge-blue">LV5</span> 罚金
                     </td>
                 </tr>
                 <tr>
-                    <th>Buyer Tag</th>
+                    <th>Tag:</th>
                     <td>
                         <button class="btn btn-default" data-type="More_buyer">More</button>
                         <button class="btn btn-default" data-type="Add_buyer">Add</button>
                     </td>
-                    <th>Seller Tag</th>
+                    <th>Tag:</th>
                     <td>
+                        <span class="badge badge-orange">情绪型客户</span>
+                        <span class="badge badge-orange">退货退款商家</span>
                         <button class="btn btn-default" data-type="More_seller">More</button>
                         <button class="btn btn-default" data-type="Add_seller">Add</button>
                     </td>
+                </tr>
+                <tr>
+                    <th>是否为DSC买家:</th>
+                    <td>否</td>
+                    <th>是否买家首单纠纷</th>
+                    <td>是</td>
+                </tr>
+                <tr style="background-color: #e8f5e9;">
+                    <th>Status:</th>
+                    <td>纠纷关闭</td>
+                    <th>Payment Method :</th>
+                    <td>DHPAY</td>
+                </tr>
+                <tr style="background-color: #e8f5e9;">
+                    <th>Account manager:</th>
+                    <td>No</td>
+                    <th>Dispute status:</th>
+                    <td style="color: green; font-weight: bold;">等待买家退货</td>
+                </tr>
+                <tr>
+                    <th>下单渠道：</th>
+                    <td>移动APP (英文站)</td>
+                    <th>专员备注：</th>
+                    <td></td>
+                </tr>
+                <tr style="background-color: #e8f5e9;">
+                    <th>Holdreason:</th>
+                    <td style="color: green; font-weight: bold;">买家开启纠纷</td>
+                    <th>是否为PC端：</th>
+                    <td>是</td>
                 </tr>
             </table>
         </div>
@@ -101,53 +133,55 @@
             <h2>Order Shipping Information <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 物流信息</span></h2>
         </div>
         <div class="section-body">
-            <table class="info-table" id="Shipping">
+            <table class="layui-table shipping-table" id="Shipping">
                 <tbody id="Shipping1">
-                    <tr><th>Carrier requested from buyer</th><td colspan="3">Seller-Defined STD Logitstics</td></tr>
-                    <tr><th>Shipping Deadline</th><td>2026-08-10 00:03:33</td><th>买家选择发货方式</th><td>线下</td></tr>
+                    <tr><th>Carrier requested from buyer</th><td colspan="3" align="center">Seller-Defined STD Logitstics</td></tr>
+                    <tr><th>Shipping Deadline</th><td align="center">2026-08-10 00:03:33</td><th>买家选择发货方式</th><td align="center">线下</td></tr>
                 </tbody>
             </table>
+            <div class="shipping-divider"></div>
 
-            <table class="info-table shipping-table" id="Shipping-2">
+            <table class="layui-table shipping-table" id="Shipping-2">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Tracking No / Last Mile</th>
-                        <th>是否异常</th>
-                        <th>物流是否退赔</th>
-                        <th>赔付金额</th>
-                        <th>Note</th>
-                        <th>投诉状态</th>
-                        <th>Carrier</th>
-                        <th>Status From Carrier</th>
-                        <th>发货方式</th>
+                        <th style="width: 10%;" align="center">Date</th>
+                        <th style="width: 15%;" align="center">Tracking No / Last Mile</th>
+                        <th style="width: 10%;" align="center">是否异常</th>
+                        <th style="width: 10%;" align="center">物流是否退赔</th>
+                        <th style="width: 10%;" align="center">赔付金额</th>
+                        <th style="width: 10%;" align="center">Note</th>
+                        <th style="width: 10%;" align="center">投诉状态</th>
+                        <th style="width: 10%;" align="center">Carrier</th>
+                        <th style="width: 10%;" align="center">Status From Carrier</th>
+                        <th style="width: 10%;" align="center">发货方式</th>
                     </tr>
                 </thead>
                 <tbody id="Shipping2">
                     <tr>
-                        <td>2026-08-05 15:32</td>
-                        <td>ZS16243569999</td>
-                        <td>否/否</td>
-                        <td>否</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>EMS</td>
-                        <td><a href="javascript:void(0);" style="color:#1890ff;" onclick="viewdetail('EMS','ZS16243569999')">查看详情</a><br><small style="color:#888;">已妥投【GB NOTTINGHAM 】</small></td>
-                        <td>线下</td>
+                        <td align="center">2026-08-05 15:32</td>
+                        <td align="center">ZS16243569999</td>
+                        <td align="center">否/否</td>
+                        <td align="center">否</td>
+                        <td align="center"></td>
+                        <td align="center"></td>
+                        <td align="center"></td>
+                        <td align="center">EMS</td>
+                        <td align="center"><a href="javascript:void(0);" style="color:#1890ff;" onclick="viewdetail('EMS','ZS16243569999')">查看详情</a><br><small style="color:#888;">已妥投【GB NOTTINGHAM 】</small></td>
+                        <td align="center">线下</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="shipping-divider"></div>
 
-            <table class="info-table shipping-table" id="Shipping-3">
-                <thead><tr><th style="width:120px;"></th><th>Billing Address</th><th>Shipping Address</th></tr></thead>
+            <table class="layui-table shipping-table" id="Shipping-3">
+                <thead><tr><th style="width:120px;"></th><th style="width: 44%;" align="center">Billing Address</th><th style="width: 44%;" align="center">Shipping Address</th></tr></thead>
                 <tbody id="Shipping3">
-                    <tr><th>Contact Name</th><td></td><td>- Jason lin</td></tr>
-                    <tr><th>Address Line 1</th><td></td><td>22 Quay Place</td></tr>
-                    <tr><th>State</th><td></td><td>NOTTINGHAM</td></tr>
-                    <tr><th>Country</th><td></td><td>United Kingdom</td></tr>
-                    <tr><th>City</th><td></td><td>NOTTINGHAM</td></tr>
-                    <tr><th>Postal Code</th><td></td><td>NG23EW</td></tr>
+                    <tr><th>Contact Name</th><td></td><td align="center">- Jason lin</td></tr>
+                    <tr><th>Address Line 1</th><td></td><td align="center">22 Quay Place</td></tr>
+                    <tr><th>State</th><td></td><td align="center">NOTTINGHAM</td></tr>
+                    <tr><th>Country</th><td></td><td align="center">United Kingdom</td></tr>
+                    <tr><th>City</th><td></td><td align="center">NOTTINGHAM</td></tr>
+                    <tr><th>Postal Code</th><td></td><td align="center">NG23EW</td></tr>
                     <tr><th></th><td><a href="//portrayal.eos.dhgate.com/help/contact/index?paymenttype=2&title=321250548418" target="_blank">联系信息</a></td><td></td></tr>
                 </tbody>
             </table>
@@ -156,7 +190,7 @@
                 <button id="showall" onclick="showall()" class="btn btn-primary">显示全部</button>
                 <button id="hideall" onclick="hideall()" class="btn btn-default" style="display:none;">隐藏全部</button>
             </div>
-            <table class="info-table" id="Shipping-4"></table>
+            <table class="layui-table" id="Shipping-4"></table>
         </div>
     </div>
 
@@ -472,13 +506,17 @@
                                 <td align="center">2026-08-29 15:24:24</td>
                                 <td align="center">Madant jimmy</td>
                                 <td align="center">La taille du maillot n'est pas la bonne</td>
-                                <td align="center"></td>
+                                <td align="center">
+                                    &nbsp;&nbsp;file:<a style="color:#00a1e1;" target="_blank" href="//image.dhgate.com/f3/csmg/bw/j/26/example1.jpg">f3/csmg/bw/j/26/example1.jpg</a><br>
+                                </td>
                             </tr>
                             <tr>
                                 <td align="center">2026-08-29 15:23:19</td>
                                 <td align="center">Madant jimmy</td>
                                 <td align="center">The shipping costs are too high for me.</td>
-                                <td align="center"></td>
+                                <td align="center">
+                                    &nbsp;&nbsp;file:<a style="color:#00a1e1;" target="_blank" href="//image.dhgate.com/f3/csmg/bw/j/26/example2.jpg">f3/csmg/bw/j/26/example2.jpg</a><br>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -515,7 +553,9 @@
                                     Important Notice<br>
                                     The returned product must be brand new and suitable for resale. If the product cannot be resold, your refund request will be cancelled. This product will be disposed of according to platform regulations. All losses and return shipping costs arising from this shall be borne by the buyer.
                                 </td>
-                                <td align="center"></td>
+                                <td align="center">
+                                    &nbsp;&nbsp;file:<a style="color:#00a1e1;" target="_blank" href="//image.dhgate.com/f3/csmg/bw/j/26/example3.jpg">f3/csmg/bw/j/26/example3.jpg</a><br>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -527,7 +567,7 @@
     <!-- ==================== Communication Links ==================== -->
     <div class="section-card">
         <div class="section-header">
-            <h2>Communication <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 沟通渠道</span></h2>
+            <h2>communiCationList <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 沟通渠道</span></h2>
         </div>
         <div class="section-body">
             <div class="comm-links">
@@ -543,7 +583,7 @@
     <!-- ==================== Arbitramen List ==================== -->
     <div class="section-card">
         <div class="section-header">
-            <h2>Arbitramen List <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 裁决方案记录</span></h2>
+            <h2>裁决方案记录</h2>
         </div>
         <div class="section-body">
             <table class="layui-table">
@@ -580,7 +620,7 @@
     <!-- ==================== Twice Arbitramen ==================== -->
     <div class="section-card">
         <div class="section-header">
-            <h2>Twice Arbitramen <span style="font-weight:400;color:#999;font-size:13px;margin-left:8px;">- 二次裁决记录</span></h2>
+            <h2>二次裁决记录</h2>
         </div>
         <div class="section-body">
             <table class="layui-table">
